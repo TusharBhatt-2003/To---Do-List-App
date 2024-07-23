@@ -74,7 +74,11 @@ form button:hover {
     justify-content: space-between;
     align-items: center;
     transition: 0.5s;
-    border-radius: 2rem;
+    border-bottom-right-radius: 18px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
 }
 
 .todo li {
@@ -95,8 +99,8 @@ form button:hover {
 }
 
 .trash-btn {
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 1.75rem;
+   border-top-right-radius: 2px;
+    border-bottom-right-radius: 15px;
     background: rgb(235, 171, 171);
     color: red;
 }
