@@ -50,14 +50,15 @@ function deleteCheck(event) {
     const item = event.target;
     // Delete todo
     if (item.classList.contains("trash-btn")) {
-        const todo = item.parentElement;
-        todo.classList.add("slide");
+      const todo = item.parentElement;
+      todo.classList.add("explode");
+  
+      // Remove todo after animation
+      todo.addEventListener("animationend", function() {
+        todo.remove();
         // Remove from local storage
         removeLocalTodos(todo);
-        // Remove todo after transition
-        todo.addEventListener("transitionend", function() {
-            todo.remove();
-        });
+      });
     }
 
     // Mark todo as completed
