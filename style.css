@@ -128,10 +128,24 @@ form button:hover {
     color: rgb(45, 33, 123);
 }
 
-.slide {
-    transform: translateX(10rem);
-    opacity: 10;
-}
+.explode {
+    animation: explode 0.5s forwards;
+  }
+  
+  @keyframes explode {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5) rotate(random(360deg));
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2) rotate(random(360deg));
+      opacity: 0;
+    }
+  }
 
 select {
     -webkit-appearance: none;
