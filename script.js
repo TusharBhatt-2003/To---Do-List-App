@@ -150,3 +150,21 @@ function removeLocalTodos(todo) {
     todos.splice(todos.indexOf(todoIndex), 1);
     localStorage.setItem('todos', JSON.stringify(todos));
 }
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    button.addEventListener('click', () => {
+        if (body.classList.contains('light-theme')) {
+            body.classList.replace('light-theme', 'dark-theme');
+        } else {
+            body.classList.replace('dark-theme', 'light-theme');
+        }
+    });
+
+    // Initialize theme
+    body.classList.add('light-theme');
+});
