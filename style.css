@@ -6,13 +6,36 @@
 
 body {
     /* background-color: mediumslateblue; */
-    background: radial-gradient(circle, rgb(255, 0, 0)  0%, rgb(133, 114, 238)  100%);
-    color: rgb(251, 245, 222); /*Alabaster*/
-    text-shadow: 5px 5px 50px;
-    font-family: "Poppins", sans-serif;
+    
+    font-family: "Luckiest Guy", cursive;
     min-height: 100vh;
      display: flex;
     flex-direction: column;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.light-theme {
+    background: #fff;
+  
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+
+    .todo, .select, form button, form input {
+        box-shadow: none;
+    }
+    
+    #theme-toggle {
+        margin: 2rem;
+        color: rgb(0, 0, 0);
+        background: #ffffff;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 5px;
+        box-shadow: none;
+        padding: 5px;
+    }
 }
 
 header {
@@ -36,22 +59,24 @@ form button {
     padding-left: 1rem;
     font-size: 1.8rem;
     border: none;
-    background: rgb(255, 218, 218);
+    background: rgb(243, 243, 243);
     border-radius: 2rem;
-    color: rgb(16, 8, 63);
+    color: rgb(0, 0, 0);
+    box-shadow: 2px 2px 10px rgb(182, 182, 182);
 }
 
 form button {    
-    color: rgb(185, 68, 68);/* Dark pastel green */
-    background: rgb(255, 218, 218);
+    color: rgb(0, 60, 138);/* Dark pastel green */
+    background: rgb(215, 213, 213);
     cursor: pointer;
     transition: all 0.3 ease;
     margin-left: 0.5rem;
+    box-shadow: 2px 2px 10px rgb(182, 182, 182);
 }
 
 form button:hover {
-    color: rgb(255, 218, 218);
-    background: rgb(185, 68, 68);/* Dark pastel green */
+    color: rgb(215, 213, 213);
+    background: rgb(0, 0, 0);
 }
 
 .fa-plus-circle {
@@ -75,8 +100,8 @@ form button:hover {
 .todo {
     margin: 0.5rem;
     padding-left: 0.5rem;
-    background: rgb(255, 218, 218); /*Alabaster*/
-    color: rgb(29, 11, 100);
+    background: rgb(243, 243, 243); /*Alabaster*/
+    color: rgb(0, 0, 0);
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -86,6 +111,8 @@ form button:hover {
     border-top-right-radius: 2px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    box-shadow: 2px 2px 10px rgb(182, 182, 182);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -95,7 +122,7 @@ form button:hover {
 
 .trash-btn, 
 .complete-btn {
-    color: rgb(114, 174, 29); /*Alabaster*/
+    color: rgb(62, 104, 4); /*Alabaster*/
     border: none;
     padding: 1rem;
     cursor: pointer;
@@ -103,14 +130,14 @@ form button:hover {
 }
 
 .complete-btn {
-    background: rgb(218, 222, 138);/* Dark pastel green */
+    background: rgb(254, 255, 239);/* Dark pastel green */
 }
 
 .trash-btn {
    border-top-right-radius: 2px;
     border-bottom-right-radius: 15px;
-    background: rgb(235, 171, 171);
-    color: red;
+    background: rgb(252, 231, 231);
+    color: rgb(125, 4, 4);
 }
 
 .todo-item {
@@ -124,8 +151,8 @@ form button:hover {
 
 .completed {
     text-decoration: line-through;
-    opacity: 0.7;
-    color: rgb(45, 33, 123);
+    opacity: 0.5;
+    color: rgb(0, 0, 0);
 }
 
 .explode {
@@ -163,22 +190,24 @@ select {
     border-bottom-left-radius: 7px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+      box-shadow: 2px 2px 10px rgb(182, 182, 182);
 }
 
 select {
-    color:rgb(24, 9, 88); /*Tomato*/
+    color:rgb(0, 0, 0); /*Tomato*/
     width: 10rem;
     height: 3.2rem;
     cursor: pointer;
     padding: 1rem;
-    background: rgb(255, 218, 218);
+    background: rgb(220, 220, 220);
+    box-shadow: 2px 2px 10px rgb(182, 182, 182);
 }
 
 .select::after {
-    color: rgb(255, 218, 218);
+    color: rgb(255, 255, 255);
     content: "\25BC";
     position: absolute;
-    background:rgb(181, 41, 74); /*Tomato*/
+    background:rgb(108, 108, 108); /*Tomato*/
     top: 0;
     right: 0;
     padding: 1rem;
@@ -187,16 +216,27 @@ select {
 }
 
 .select:hover::after {
-    background: rgb(255, 218, 218); /*Alabaster*/
-    color: rgb(255, 1, 1); /*Tomato*/
+    background: rgb(255, 255, 255); /*Alabaster*/
+    color: rgb(108, 108, 108); /*Tomato*/
+}
+
+#theme-toggle {
+    margin: 2rem;
+    color: white;
+    background: #000;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgb(182, 182, 182);
+    padding: 5px;
 }
 footer {
     position: relative;
-    bottom: -19ex;
+    padding: 1em;
     text-align: center;
-    color: rgb(255, 218, 218);
+    color: rgb(129, 0, 0);
    
 }
+
 @media (max-width: 600px) {
     header {
         font-size: 1.2rem;
