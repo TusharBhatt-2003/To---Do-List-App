@@ -221,6 +221,7 @@ select {
 }
 
 #theme-toggle {
+    width: 90px;
     margin: 2rem;
     color: white;
     background: #000;
